@@ -5,7 +5,6 @@ import com.vakoms.objects.Lang;
 import com.vakoms.utils.LocaleManager;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
@@ -17,7 +16,6 @@ import java.util.Observer;
 import java.util.ResourceBundle;
 
 public class Main extends Application implements Observer {
-
 
     private static final String FXML_MAIN = "../fxml/main.fxml";
     public static final String BUNDLES_FOLDER = "com.vakoms.bundles.Locale";
@@ -31,7 +29,7 @@ public class Main extends Application implements Observer {
     private VBox currentRoot;
 
     @Override
-    public void start(Stage primaryStage) throws Exception {
+    public void start(Stage primaryStage) {
         this.primaryStage = primaryStage;
         createGUI(LocaleManager.UA_LOCALE);
     }
